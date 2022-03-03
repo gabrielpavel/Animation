@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Animation</title>
+    <style>
+        #main {
+            margin: 0 auto;
+            width: 650px;
+            height: 550px;
+            background-color: #050210;
+
+        }
+
+        #inner {
+            background: linear-gradient(#55fb9f, #fb5dad, #b97aff, #55fb9f);
+            width: 350px;
+            height: 350px;
+            position: relative;
+            left: 150px;
+            top: 100px;
+            border-radius: 100%;
+            animation-name: my-animation;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+            filter: blur(1px);
+
+        }
+
+        #eclipse {
+
+            width: 280px;
+            height: 280px;
+            background-color: #050210;
+            transform: translate(35px, 35px);
+            border-radius: 100%;
+            animation-name: eclipse-anim;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+
+
+        }
+
+        @keyframes my-animation {
+            0% {
+                box-shadow: 2px 2px 50px 30px #b87aff3b;
+            }
+
+            20% {
+                transform: rotate(72deg);
+                box-shadow: 2px 2px 50px 30px #b87aff3b;
+
+
+            }
+
+            40% {
+                transform: rotate(144deg);
+                box-shadow: 2px 2px 50px 30px #fb5dac48;
+
+            }
+
+            60% {
+
+                transform: rotate(216deg);
+                box-shadow: 2px 2px 50px 30px #55fba02f;
+
+
+            }
+
+            80% {
+
+                transform: rotate(288deg);
+                box-shadow: 2px 2px 50px 30px #b87aff3b;
+
+            }
+
+            100% {
+
+                transform: rotate(360deg);
+                box-shadow: 2px 2px 50px 30px #fb5dac48;
+
+            }
+        }
+
+        @keyframes eclipse-anim {
+
+            0% {
+                background: radial-gradient(#050210da 0px, #050210 5px);
+            }
+
+            10% {
+
+                background: radial-gradient(#050210da 0px, #050210 10px);
+
+            }
+
+            20% {
+                background: radial-gradient(#050210da 0px, #050210 20px);
+            }
+
+            40% {
+                background: radial-gradient(#050210da 0px, #050210 40px);
+
+            }
+
+            60% {
+
+                background: radial-gradient(#050210da 0px, #050210 60px);
+
+            }
+
+            80% {
+
+                background: radial-gradient(#050210da 0px, #050210 80px);
+
+            }
+
+
+            100% {
+
+                background: radial-gradient(#050210da 0px, #050210 100px);
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="main">
+        <div id="inner">
+            <div id="eclipse"></div>
+        </div>
+
+    </div>
+</body>
+
+</html>
